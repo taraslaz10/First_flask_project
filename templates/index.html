@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<ul>
+  <li><a href="/boyarka">Про боярку</a></li>
+  <li><a href="#">Олди</a>
+      <ul>
+          <li><a href="/seroga">Серога</a></li>
+          <li><a href="/yaric">Ярик</a></li>
+          <li><a href="/andriy">Андрюха з вишиванки</a></li>
+      </ul>
+  </li>  
+  <li><a href="/rupra">Рупрапраганда</a>
+          <ul>
+            <li><a href="/taras">Тарас</a></li>
+            <li><a href="/vetal">Веталь</a></li>
+            <li><a href="/trush">Труш</a></li>
+            <li><a href="/zenya">Зеня</a></li>
+            <li><a href="/grab">Граб</a></li>
+        </ul>
+  </li>
+  <li><a href="/contacs">Контакти</a></li>
+</ul>
+    <title> {{ title }} </title>
+    {% if current_user.is_authenticated %}
+    Hi {{ current_user.name }}!
+    {% endif %}
+
+
+		{% block body %}
+    {% endblock %}
+    
+
+		
